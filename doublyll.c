@@ -56,31 +56,24 @@ void main()
 }
 void implement()
 {
-  struct node *newnode , *temp , *temp1;
+  struct node *newnode , *temp;
   int c;
   while(c!=0)
   {
     newnode=(struct node *)malloc(sizeof(struct node));
     printf("\nenter data = ");
     scanf("%d",&newnode->data);
+    newnode->prev=0;
     newnode->next=0;
     if(head==0)
     {
-        head=temp=temp1=newnode;
+        head=temp=newnode;
     }
     else
     {
-        if(head==newnode)
-        {
-            temp->prev=NULL;
-        }
-        else
-        {
-            temp->next=newnode;
-            temp=newnode;
-            temp->prev=temp1;
-            temp1=temp;
-        }
+        temp->next=newnode;
+        newnode->prev=temp;
+        temp=newnode;
     }
     count++;
     printf("\ndo you want to add element(0 or 1)= ");
