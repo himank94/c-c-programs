@@ -15,6 +15,9 @@ void beginsert();
 void last_insert();
 void pos_insert();
 void aftpos_insert();
+void delete_begin();
+void delete_last();
+void delete_pos();
 void main()
 {
   int choice=0;
@@ -40,12 +43,15 @@ void main()
       case 5:
 	    aftpos_insert();
 	    break;
-    //   case 6:
-	//     delete_last();
-	//     break;
-    //   case 7:
-	//     pos_delete();
-	//     break;
+      case 6:
+	    delete_begin();
+	    break;
+      case 7:
+	    delete_last();
+	    break;
+      case 8:
+        delete_pos();
+        break;
       case 9:
 	    display();
 	    break;
@@ -221,6 +227,68 @@ void aftpos_insert()
             newnode->prev=temp;
             temp->next=newnode;
             count++;
+        }
+    }
+}
+void delete_begin()
+{
+    struct node *temp;
+    temp=head;
+    if(head==0)
+    {
+        printf("\nlist is empty");
+    }
+    else
+    {
+        temp=temp->next;
+        temp->prev=0;
+        free(head);
+        head=temp;
+        count--;
+    }
+}
+void delete_last()
+{
+    struct node *temp;
+    if(head==0)
+    {
+        printf("\nlist is empty");
+    }
+    else
+    {
+        temp=tail->prev;
+        temp->next=0;
+        free(tail);
+        tail=temp;
+        count--;
+    }
+}
+void delete_pos()
+{
+    int pos;
+    if(head==0)
+    {
+        printf("\nlist is empty");
+    }
+    else
+    {
+        printf("\nenter the position= ");
+        scanf("%d",&pos);
+        if(pos>count)
+        {
+            printf("\ninvalid position");
+        }
+        else if(pos==1)
+        {
+            delete_begin();
+        }
+        else if(pos==count)
+        {
+            delete_last();
+        }
+        else
+        {
+            
         }
     }
 }
