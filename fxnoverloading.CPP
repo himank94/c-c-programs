@@ -1,6 +1,6 @@
 //function overloading
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class area
 {
   private:
@@ -22,11 +22,9 @@ void area::arears(int l , int b)
   breadth=b;
   cout<<"\narea of rectangle= "<<length*breadth;
 }
-void main()
+int main()
 {
   area a1;
-  clrscr();
   a1.arears();
   a1.arears(10,20);
-  getch();
 }

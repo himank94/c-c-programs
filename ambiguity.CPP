@@ -1,6 +1,6 @@
 //ambiguity
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class M
 {
   protected:
@@ -29,12 +29,10 @@ class P: public M,public N
       cout<<"\nwelcome\n";
     }
 };
-void main()
+int main()
 {
-  clrscr();
   P p;
   p.display();
   p.M::display();
   p.N::display();
-  getch();
 }

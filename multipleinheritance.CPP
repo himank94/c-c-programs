@@ -1,6 +1,6 @@
 //3 wap of multiple inheritance
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class M
 {
   private:
@@ -34,12 +34,10 @@ void P::display()
   cout<<"\nN = "<<getn()<<endl;
   cout<<"\nM * N = "<<getm() * getn()<<endl;
 }
-void main()
+int main()
 {
-  clrscr();
   P p;
   p.getm();
   p.getn();
   p.display();
-  getch();
 }

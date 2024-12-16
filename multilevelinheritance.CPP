@@ -1,6 +1,6 @@
 //wap of multilevel inheritance
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class A
 {
   private:
@@ -45,13 +45,10 @@ void C::display()
   cout<<"\nRoll no = "<<putrollno()<<endl;
   cout<<"\nMarks = "<<putmarks()<<endl;
 }
-void main()
+int main()
 {
-  clrscr();
   C c1;
   c1.getrollno();
   c1.getmarks();
-  clrscr();
-  c1.display();
-  getch();
+  c1.display(); 
 }

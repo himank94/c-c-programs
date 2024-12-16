@@ -1,7 +1,7 @@
 //exception handling
-#include<iostream.h>
-#include<conio.h>
-void main()
+#include<iostream>
+using namespace std;
+int main()
 {
   int a,b;
   cout<<"enter values of a & b= ";
@@ -17,7 +17,7 @@ void main()
     }
     else
     {
-      throw: x;
+      throw(x);
     }
   }
   catch(int i)
@@ -25,5 +25,4 @@ void main()
     cout<<"\nexception caught:x= "<<x<<endl;
   }
   cout<<"\nend";
-  getch();
 }

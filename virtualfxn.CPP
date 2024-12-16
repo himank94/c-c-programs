@@ -1,6 +1,6 @@
 //virtual function
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class A
 {
   int x;
@@ -27,9 +27,8 @@ class B:public A
       cout<<"\nvalue of y is "<<y<<endl;
     }
 };
-void main()
+int main()
 {
-  clrscr();
   A *a;
   B b;
   a=&b;
@@ -37,5 +36,4 @@ void main()
   b.gety();
   a->display();
   b.display();
-  getch();
 }

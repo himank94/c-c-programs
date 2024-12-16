@@ -1,5 +1,5 @@
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 int count=0;
 class alpha
 {
@@ -15,9 +15,8 @@ class alpha
       count--;
     }
 };
-void main()
+int main()
 {
-  clrscr();
   cout<<"\nenter main objects"<<endl;
   alpha a1,a2,a3,a4;
   {
@@ -28,5 +27,4 @@ void main()
     cout<<"\nblock 2"<<endl;
     alpha a6;
   }
-  getch();
 }

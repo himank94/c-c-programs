@@ -1,6 +1,6 @@
 //wap of hybrid inheritance
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class student
 {
   private:
@@ -68,14 +68,11 @@ void result::display()
   cout<<"\ngrades of sports = "<<putgrades()<<endl;
   cout<<"\ntotal marks = "<<sub1+sub2+putgrades()<<endl;
 }
-void main()
+int main()
 {
-  clrscr();
   result r1;
   r1.getrollno();
   r1.getmarks();
   r1.getgrades();
-  clrscr();
   r1.display();
-  getch();
 }

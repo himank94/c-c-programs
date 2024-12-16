@@ -1,5 +1,5 @@
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class rect
 {
   private:
@@ -12,14 +12,13 @@ class rect
     }
     rect()
     {
+      length=10;
       breadth=20;
       cout<<length*breadth;
     }
 };
-void main()
+int main()
 {
-  clrscr();
   rect r1(10);
   rect r2;
-  getch();
 }

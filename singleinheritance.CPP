@@ -1,5 +1,5 @@
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class student
 {
   private:
@@ -41,13 +41,11 @@ void bca::display()
   cout<<"\nmarks="<<marks<<endl;
   getresult();
 }
-void main()
+int main()
 {
-  clrscr();
   bca s;
   s.getrollno();
   s.getmarks();
   s.getresult();
   s.display();
-  getch();
 }

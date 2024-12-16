@@ -1,6 +1,6 @@
 //operator overloading
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
 class complex
 {
   int a,b;
@@ -25,18 +25,16 @@ class complex
       cout<<a<<"\t+\t"<<b<<"i"<<endl;
     }
 };
-void main()
+int main()
 {
-  clrscr();
   complex obj;
   obj.getvalue();
-  obj++;
+  obj.operator++();
   cout<<"\nincrement complex no\n";
   obj.display();
-  obj--;
+  obj.operator--();
   cout<<"\ndecrement complex no\n";
   obj.display();
-  getch();
 } /*
 class distance
 {
