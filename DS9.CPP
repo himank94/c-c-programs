@@ -1,10 +1,9 @@
 #include<stdio.h>
 #include<conio.h>           // addition,sub,div,modulus
-void main()
+int main()
 {
   int a[100][100],b[100][100],c[100][100];
   int s1,s2,i,j;
-  clrscr();
   printf("\nenter array size s1 &s2=");
   scanf("%d",&s1);
   scanf("%d",&s2);
@@ -28,7 +27,7 @@ void main()
   {
     for(j=0;j<s2;j++)
     {
-      c[i][j]=a[i][j]+b[i][j];
+      c[i][j]=a[i][j]%b[i][j];
     }
   }
   for(i=0;i<s1;i++)
@@ -39,5 +38,4 @@ void main()
     }
     printf("\n");
   }
-  getch();
 }

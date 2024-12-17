@@ -28,7 +28,7 @@ int peek()
 int pop()
 {
   int data;
-  if(!isempty())
+  if(isempty()==0)
   {
     data = stack[top];
     top=top-1;
@@ -43,7 +43,7 @@ int pop()
 
 int push(int data)
 {
-  if(!isfull())
+  if(isfull()==0)
   {
     top=top+1;
     stack[top]=data;
@@ -55,7 +55,7 @@ int push(int data)
   return 0;
 }
 
-void main()
+int main()
 {
   push(1);
   push(2);
@@ -64,10 +64,9 @@ void main()
   push(5);
   printf("\nelement at top of stack: %d\n",peek());
   printf("\ndispaly all stack elements: \n");
-  while(!isempty())
+  while(isempty()!=1)
   {
     int data=pop();
     printf("%d\n",data);
   }
-  getch();
 }

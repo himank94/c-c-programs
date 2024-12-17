@@ -1,10 +1,9 @@
 #include<stdio.h>                          //multiplication
 #include<conio.h>
-void main()
+int main()
 {
   int a[100][100],b[100][100],c[100][100];
   int s1,s2,i,j,k;
-  clrscr();
   printf("\nenter array size s1 &s2=");
   scanf("%d",&s1);
   scanf("%d",&s2);
@@ -43,5 +42,4 @@ void main()
     }
     printf("\n");
   }
-  getch();
 }
