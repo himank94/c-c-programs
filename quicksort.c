@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
-partition(a,lb,ub)
+int partition(int a[],int lb,int ub)
 {
     int k;
     int pivot=a[lb];
@@ -27,4 +27,32 @@ partition(a,lb,ub)
     a[lb]=a[end];
     a[end]=k;
     return end;
+}
+int quicksort(int a[],int lb,int ub)
+{
+    if(lb<ub)
+    {
+        int loc= partition(a,lb,ub);
+        quicksort(a,lb,loc-1);
+        quicksort(a,loc+1,ub);
+    }
+}
+void main()
+{
+    int lb,ub,a[100],n,i;
+    printf("enter array size= ");
+    scanf("%d",&n);
+    lb=0;
+    ub=n-1;
+    for(i=0;i<n;i++)
+    {
+        printf("\nenter a[%d]= ",i);
+        scanf("%d",&a[i]);
+    }
+    quicksort(a,lb,ub);
+    printf("\nsorted array");
+    for(i=0;i<n;i++)
+    {
+        printf("\n%d",a[i]);
+    }
 }
