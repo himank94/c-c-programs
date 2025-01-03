@@ -1,9 +1,8 @@
 #include<stdio.h>
 #include<conio.h>
-void main()                            //searching
+int main()                            //searching
 {
   int arr[100],size,i,search,p=0;
-  clrscr();
   printf("\nenter array size=");
   scanf("%d",&size);
   for(i=0;i<size;i++)
@@ -23,5 +22,4 @@ void main()                            //searching
   }
   if(p==0)
     printf("\nsearch not found");
-  getch();
 }

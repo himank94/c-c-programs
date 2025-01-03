@@ -1,10 +1,9 @@
 #include<stdio.h>
-#include<conio.h>          //concatination
-void main()
+#include<conio.h>          //merging
+int main()
 {
   int arr1[100],arr2[100],arr3[100];
   int n1,n2,i,a=0;
-  clrscr();
   printf("\nenter array size n1&n2=");
   scanf("%d %d",&n1,&n2);
   for(i=0;i<n1;i++)
@@ -31,5 +30,4 @@ void main()
   {
     printf("\n%d",arr3[i]);
   }
-  getch();
 }

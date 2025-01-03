@@ -1,9 +1,8 @@
 #include<stdio.h>
 #include<conio.h>   //sorting
-void main()
+int main()
 {
   int arr[100],i,j,size,p;
-  clrscr();
   printf("\nenter array size=");
   scanf("%d",&size);
   for(i=0;i<size;i++)
@@ -33,5 +32,4 @@ void main()
   {
     printf("\n%d",arr[i]);
   }
-  getch();
 }

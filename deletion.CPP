@@ -1,9 +1,8 @@
 #include<stdio.h>
 #include<conio.h>     // deletion
-void main()
+int main()
 {
   int arr[100],size,i,pos;
-  clrscr();
   printf("\nenter array size=");
   scanf("%d",&size);
   for(i=0;i<size;i++)
@@ -26,5 +25,4 @@ void main()
       printf("\n%d",arr[i]);
     }
   }
-  getch();
 }

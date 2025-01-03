@@ -32,7 +32,6 @@ int pop()
   {
     data = stack[top];
     top=top-1;
-    return data;
   }
   else
   {
